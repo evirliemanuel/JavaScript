@@ -1,0 +1,1 @@
+(function(){var name=prompt("your name ?"); alert("hello " + name);})();
