@@ -6,56 +6,31 @@
   </head>
   <body>
     <input type="text" id="input" value="">
-    <input type="button" id="add" value="+" onclick="add()">
-    <button type="button" id="sub" value="-" onclick="sub()">-</button>
-    <button type="button" id="mul" value="*" onclick="mul()">*</button>
-    <button type="button" id="div" value="/" onclick="div()">/</button>
-    <button type="button" id="equal" onclick="equals()">=</button>
-    <p id=""></p>
-
+    <input type="button" id="number1" value="1" onclick="getValuenum1()">
+      <input type="button" id="number2" value="2" onclick="getValuenum2()">
     <script type="text/javascript">
-    var answer ;
-    var firstValue;
-    var secondValue;
-    var operator;
-      function answer() {
-        answer = eval(parseInt(firstValue) + operator + parseInt(secondValue));
-        alert(answer);
 
+      function getValuenum1() {
+        var a = document.getElementById('input').value ;
+        if (a == ""){
+        var x = document.getElementById('number1').value ;
+        document.getElementById('input').value = x ;
+      }else {
+        var x = document.getElementById('number1').value ;
+        document.getElementById('input').value = a + x ;
       }
 
-      function add() {
-      firstValue = document.getElementById('input').value;
-      operator = document.getElementById('add').value;
-      document.getElementById('input').value = " ";
-
+      }
+      function getValuenum2() {
+        var a = document.getElementById('input').value ;
+        if (a == ""){
+        var x = document.getElementById('number2').value ;
+        document.getElementById('input').value = x ;
+      }else {
+        var x = document.getElementById('number2').value ;
+        document.getElementById('input').value = a + x ;
       }
 
-      function sub() {
-      firstValue = document.getElementById('input').value;
-      operator = document.getElementById('sub').value;
-      document.getElementById('input').value = " ";
-
-      }
-
-      function mul() {
-      firstValue = document.getElementById('input').value;
-      operator = document.getElementById('mul').value;
-      document.getElementById('input').value = " ";
-
-      }
-
-      function div() {
-      firstValue = document.getElementById('input').value;
-      operator = document.getElementById('div').value;
-      document.getElementById('input').value = " ";
-
-      }
-
-      function equals() {
-        secondValue = document.getElementById('input').value;
-          document.getElementById('input').value = " ";
-        return answer();
       }
     </script>
   </body>
