@@ -3,35 +3,204 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script type="text/javascript">
+
+/// Number Button Start Here
+    var logs ;
+
+    function getNumberValueNumber1() {
+      var a = document.getElementById('input').value ;
+      if (a == ""){
+      var x = document.getElementById('number1').value ;
+      document.getElementById('input').value = x ;
+      logs = document.getElementById('logs').innerHTML = x ;
+    }else {
+      y = document.getElementById('number1').value ;
+      document.getElementById('input').value = a + x ;
+      logs = document.getElementById('logs').innerHTML = a + x ;
+    }
+  }
+
+  function getNumberValueNumber2() {
+    var a = document.getElementById('input').value ;
+    if (a == ""){
+    var x = document.getElementById('number2').value ;
+    document.getElementById('input').value = x ;
+    logs = document.getElementById('logs').innerHTML = x ;
+  }else {
+    var x = document.getElementById('number2').value ;
+    document.getElementById('input').value = a + x ;
+      logs = document.getElementById('logs').innerHTML = a + x ;
+  }
+}
+
+function getNumberValueNumber3() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number3').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number3').value ;
+  document.getElementById('input').value = a + x ;
+      logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber4() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number4').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number4').value ;
+  document.getElementById('input').value = a + x ;
+      logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber5() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number5').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number5').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber6() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number6').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+
+}else {
+  var x = document.getElementById('number6').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+
+}
+}
+
+function getNumberValueNumber7() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number7').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number7').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber8() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number8').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number8').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber9() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number9').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number9').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+
+function getNumberValueNumber0() {
+  var a = document.getElementById('input').value ;
+  if (a == ""){
+  var x = document.getElementById('number0').value ;
+  document.getElementById('input').value = x ;
+  logs = document.getElementById('logs').innerHTML = x ;
+}else {
+  var x = document.getElementById('number0').value ;
+  document.getElementById('input').value = a + x ;
+  logs = document.getElementById('logs').innerHTML = a + x ;
+}
+}
+/// End Here
+    </script>
   </head>
   <body>
     <input type="text" id="input" value="">
-    <input type="button" id="number1" value="1" onclick="getValuenum1()">
+      <input type="button" id="number1" value="1" onclick="getValuenum1()">
       <input type="button" id="number2" value="2" onclick="getValuenum2()">
+      <input type="button" id="number3" value="3" onclick="getValuenum3()">
+      <input type="button" id="number4" value="4" onclick="getValuenum4()">
+      <input type="button" id="number5" value="5" onclick="getValuenum5()">
+      <input type="button" id="number6" value="6" onclick="getValuenum6()">
+      <input type="button" id="number7" value="7" onclick="getValuenum7()">
+      <input type="button" id="number8" value="8" onclick="getValuenum8()">
+      <input type="button" id="number9" value="9" onclick="getValuenum9()">
+      <input type="button" id="number0" value="0" onclick="getValuenum0()">
+    <br>
+    <br>
+
+    Logs: <p id="logs"></p>
     <script type="text/javascript">
 
-      function getValuenum1() {
-        var a = document.getElementById('input').value ;
-        if (a == ""){
-        var x = document.getElementById('number1').value ;
-        document.getElementById('input').value = x ;
-      }else {
-        var x = document.getElementById('number1').value ;
-        document.getElementById('input').value = a + x ;
-      }
+  function getValuenum1() {
+    return getNumberValueNumber1();
+  }
 
-      }
-      function getValuenum2() {
-        var a = document.getElementById('input').value ;
-        if (a == ""){
-        var x = document.getElementById('number2').value ;
-        document.getElementById('input').value = x ;
-      }else {
-        var x = document.getElementById('number2').value ;
-        document.getElementById('input').value = a + x ;
-      }
+  function getValuenum2() {
+    return getNumberValueNumber2();
+  }
 
-      }
+  function getValuenum3() {
+    return getNumberValueNumber3();
+  }
+
+  function getValuenum4() {
+    return getNumberValueNumber4();
+  }
+
+  function getValuenum5() {
+    return getNumberValueNumber5();
+  }
+
+  function getValuenum6() {
+    return getNumberValueNumber6();
+  }
+
+  function getValuenum7() {
+    return getNumberValueNumber7();
+  }
+
+  function getValuenum8() {
+    return getNumberValueNumber8();
+  }
+
+  function getValuenum9() {
+    return getNumberValueNumber9();
+  }
+
+  function getValuenum0() {
+    return getNumberValueNumber0();
+  }
+
+
     </script>
   </body>
 </html>
