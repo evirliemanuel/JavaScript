@@ -7,5 +7,10 @@ function Person(name){
 	};
 }
 var verly = new Person();
+var ronald = new Person();
 verly.setName("Ronald");
+ronald.setName("Manuel");
+
+console.log(verly.getName());
+console.log(ronald.getName());
 console.log(verly.getName());
