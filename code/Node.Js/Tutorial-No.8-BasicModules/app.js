@@ -1,2 +1,2 @@
 var movies = require('./movies');
-movies.chuckymovies();
+movies.avatar();
