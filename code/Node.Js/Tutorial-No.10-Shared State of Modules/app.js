@@ -1,2 +1,0 @@
-require('./verly');
-require('./ivy');
