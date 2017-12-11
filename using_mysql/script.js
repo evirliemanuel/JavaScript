@@ -22,7 +22,11 @@ app.get('/', function(req, res){
 		if(!!error){
 		console.log('Error in the query');
 	}else{
+		res
 		console.log('Sucesful');
+		console.log(rows);
+		console.log(rows[1]);
+		console.log(rows[1].username);
 	}
 	});
 })
