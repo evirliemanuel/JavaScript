@@ -9,15 +9,14 @@ const connection = mysql.createConnection({
 	password: '',
 	database: 'sampledatabase'
 });
-
-connection.connect(function(error){
-	if(!!error){
-		console.log('Error');
-	}else{
-		console.log('Connected');
-	}
-});
-app.get('/', function(req, res){
+    connection.connect(function(error){
+        if(!!error){
+            console.log('Error');
+        }else{
+            console.log('Connected');
+        }
+    });
+app.get('/test', (req, res, next)=>{
 	connection.query("SELECT * FROM sampletable", function(error, rows, fields){
 		if(!!error){
 		console.log('Error in the query');
@@ -25,10 +24,10 @@ app.get('/', function(req, res){
 		console.log('Sucesful');
 		console.log(rows);
 		console.log(rows[1]);
-		console.log(rows[1].username);
+        console.log(rows[1].username);
+        res.json(rows[1].username);
 	}
 	});
-})
-app.listen(1337, function(){
-	console.log("Server is now running monkey..");
 });
+
+module.exports = app;

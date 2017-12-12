@@ -10,25 +10,28 @@ const connection = mysql.createConnection({
 	database: 'sampledatabase'
 });
 
+function testFunction(request, response){
 
-app.get('/', function(req, resp){
-	//about mysql
-	connection.Getconnection(function(error, tempCont){
+	connection.connect(function(error, tempConnection){
 		if(!!error){
-			tempCont.release();
+			tempConnection.release();
 			console.log('Error');
 		}else{
-			console.log('Connected!');
-			tempCont.query("SELECT * FROM sampletable", function(error, rows, fields){
+			console.log('Connected');
+			tempConnection.query("SELECT * FROM sampletable", function(error, rows, fields){
 				tempCont.release();
 					if(!!error){
 						console.log('Error in query');
 					}else{
-						resp.json(rows);
+						response.json(rows);
 					}
 			});
 		}
 	});
-});
 
-app.listen(1337);
+}
+
+app.get('/test', testFunction);
+app.listen(8080, function(){
+	console.log("Server is now running...");
+});
