@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 
-function onrequest(){
-    console.log("SUCCES");
-}
-
-app.use(onrequest);
+app.use((request, response, next)=>{
+    response.status(200).json({
+        message: 'Its Works'
+    });
+});
 
 module.exports = app;
