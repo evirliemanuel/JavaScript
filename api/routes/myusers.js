@@ -12,20 +12,33 @@ function findUserById(id) {
     }
     return null;
 }
+function getAllUser(){
+    var _alluser = list;
+    return _alluser;
+}
 
 router.get('/:userID',(request, response, next)=>{
 
     //map to :userID
     const id = request.params.userID;
 
+    var alluser = getAllUser();
+
+    if (id == 'all'){
+      
+            response.status(200).json(alluser);
+
+    }else{
+
     var _user = findUserById(id);
 
-    if (_user) {
-        response.status(200).json(_user);
-    } else {
-        response.status(200).json({
-            message : "Not found"
-        });
+        if (_user) {
+            response.status(200).json(_user);
+        } else {
+            response.status(200).json({
+                message : "Not found"
+            });
+        }
     }
 });
 
