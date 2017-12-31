@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/test', function(){
 	console.log("Test running..");
-});
+});gg
 
 app.post('/',function(request, response, next){
     users.id = request.body.id;
