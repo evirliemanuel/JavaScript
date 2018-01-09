@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 
-app.get('/test', function(){
-	console.log("Test running..");
-});gg
+app.get('/', function(request, response){
+    console.log("Get request");
+    response.end();
+});
 
 app.post('/',function(request, response, next){
     users.id = request.body.id;
@@ -13,12 +14,8 @@ app.post('/',function(request, response, next){
     response.status(201).json(users);
 	
 	console.log("data saved");
-});xx
-xx
-xx
-xx
-zz
-zz
+	zz
+});
 app.listen(4000, function(){
 	console.log("listen is now running...");
 });
