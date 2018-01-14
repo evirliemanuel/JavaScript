@@ -8,18 +8,14 @@ app.get('/', function(request, response){
 
 app.post('/',function(request, response, next){
     users.id = request.body.id;
-    users.username = request.body.username;
-    users.password = request.body.password;
+    users.username = request.body.api.username;
+	users.password = request.body.apipassword;
 
     response.status(201).json(users);
 	
 	console.log("data saved");
-	zz
-	zz
-	zz
-	zz
-	zz
 });
+xx
 app.listen(4000, function(){
 	console.log("listen is now running...");
 });
