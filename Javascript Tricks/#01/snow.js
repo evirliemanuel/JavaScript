@@ -1,5 +1,4 @@
 window.onload = function() {
-  document.write("manuel");
   //get the canvas and context and store in vars
   var canvas = document.getElementById("sky");
   var ctx = canvas.getContext("2d");
@@ -38,4 +37,24 @@ function drawFlakes()
       ctx.fill();
       moveflakes();
   }
+  //anime the flakes
+  var angle = 0;
+  function moveflakes(){
+    angle += 0.01;
+    for(var  i = 0; i < mf; i++){
+      //store current flake
+      var f = flakes[i];
+      //uofaste X and Y coordinates of each snowflake
+      f.y +=Math.pow(f.d, 2) + 1;
+      f.x +=Math.sin(angle) * 2;
+      //if the snowflake reacher the bottom, send a new one to the top
+      if(f.y > H){
+        flakes[i] = {x:Math.random()*W,
+         y:0,
+         r:f.r,
+         d:f.d}
+        }
+       }
+    }
+    setInterval(drawFlakes, 25);
 }
