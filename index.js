@@ -14,8 +14,7 @@ app.post('/',function(request, response, next){
     response.status(201).json(users);
 	
 	console.log("data saved");
-});ddsa
-xxadasddsdssddsasadsdsdsdsgfgxzxz
+});
 app.listen(4000, function(){
 	console.log("listen is now running...");
-});Happy Birthday to me
+});
