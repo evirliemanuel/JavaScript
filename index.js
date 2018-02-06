@@ -14,7 +14,7 @@ app.post('/',function(request, response, next){
     response.status(201).json(users);
 	
 	console.log("data saved");
-});sasa
+});
 app.listen(4000, function(){
 	console.log("listen is now running...");
 });
