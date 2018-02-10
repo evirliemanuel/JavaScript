@@ -6,16 +6,6 @@ app.get('/', function(request, response){
     response.end();
 });
 
-app.post('/',function(request, response, next){
-    users.id = request.body.id;
-    users.username = request.body.api.username;
-	users.password = request.body.apipassword;
-
-    response.status(201).json(users);
-	
-	console.log("data saved");
-});
-
 app.listen(4000, function(){
 	console.log("server is now running...");
 });
